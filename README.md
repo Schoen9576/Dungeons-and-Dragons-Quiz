@@ -1,1 +1,1 @@
-# Magic-the-Gathering-Quiz
+# Dungeons-and-Dragons-Quiz
