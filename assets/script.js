@@ -6,6 +6,7 @@ var answerTextEl = document.querySelector("#answers")
 var resultsEl = document.querySelector("#results")
 var timerEl = document.querySelector("#timer")
 var timeRemainingEl = document.querySelector("#timeRemaining")
+var timeRemaining = 60;
 
 startButtonEl.addEventListener('click', function() {
     startQuiz();
@@ -14,7 +15,6 @@ startButtonEl.addEventListener('click', function() {
 
 function timerBegin() {
     timerEl.classList.remove("hide");
-    var timeRemaining = 60;
     var timeInterval = setInterval(function(){
         if (timeRemaining >= 1) {
             timeRemainingEl.textContent = timeRemaining;

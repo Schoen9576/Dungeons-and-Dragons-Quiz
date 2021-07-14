@@ -12,17 +12,33 @@
     <header>
         <button id="highScoreBtn">View High Scores</button>
         <div id="timer" class = "hide">Time Remaining <span id="timeRemaining">60</span>s</div>
+        <div class = "hide" id="highScores"></div>
+        <h1>Dungeons and Dragons(5th Edition) Class Quiz</h1>
     </header>
-    <h1>Dungeons and Dragons(5th Edition) Class Quiz</h1>
     
-    <p>Click Start to begin</p>
+    <main></main>
     
-    <button id ="start">Start</button>
+        <p>How well do you know your class in Dungeons and Dragons?</p>
+        <p>Your final score will be the time remaining at the end of all of the questions.</p>
+        <p>Click Start when ready.</p>
     
-    <div class = "quiz-container hide"></div>
-        <div id = "question"></div>
-        <div id = "answers"></div>
-    <div id = "results hide"></div>
+    
+        <button id ="start">Start</button>
+    
+        <div class = "quiz-container hide">
+            <div id = "question"></div>
+            <div id = "answers">
+                <button id = "answer1"></button><br>
+                <button id = "answer2"></button><br>
+                <button id = "answer3"></button><br>
+                <button id = "answer4"></button><br>
+            </div>
+        </div>    
+        <div class = "results hide">
+            <input type="text" placeholder="Input your initials">
+            <button id = "scoreSave">Submit your Score</button>
+        </div>
+    </main>
     <script src="./assets/script.js"></script>
 </body>
 </html>
