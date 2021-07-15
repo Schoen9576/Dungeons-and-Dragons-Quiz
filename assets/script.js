@@ -55,9 +55,9 @@ var quiz = [
     question: "5. Which class uses divine magic derived from nature?",
     choices: [
         { text: "Paladin", correct: false},
-        { text: "Monk", correct : true},
-        { text: "Druid", correct : false},
-        { text: "Ranger", correct : false },
+        { text: "Monk", correct : false},
+        { text: "Druid", correct : true},
+        { text: "Rogue", correct : false },
     ]
 }];
 
@@ -100,10 +100,10 @@ function askQuestion() {
 
 function userAnswer() {
     if(this.value === "true") {
-        score = timeRemaining;
-
+        alert("Correct!")
     } else{
         timeRemaining = timeRemaining - 10;
+        alert("Rolled a 1")
     };
 
     questionNumber++;
@@ -112,6 +112,16 @@ function userAnswer() {
     if (questionNumber === quiz.Length) {
         clearInterval(timeInterval);
 
-        
-    }
-};
+        alert("Final Score: " + timeRemaining)
+        showResults();
+
+    } else {
+        askQuestion();
+    };
+}
+
+startButtonEl.addEventListener("click", startQuiz)
+answer1El.addEventListener("click", userAnswer)
+answer2El.addEventListener("click", userAnswer)
+answer3El.addEventListener("click", userAnswer)
+answer4El.addEventListener("click", userAnswer)
